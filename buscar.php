@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
-<!--TablaDeSimbolos JS-->
+
         <meta charset="utf-8" />
 
     <head>
-        <title>Añadir simbolo</title>
+        <title>Buscar simbolo</title>
         <center>    
             <br><br><br>
             
       </center>
     </head>
       <body > 
-        <table class="table table-striped" border="3">
+      	<?php
+
+		include("Conexion.php");
+
+		$identificador=$_POST['Buscar'];
+
+		$query="SELECT * FROM tabladesimbolos WHERE identificador='$identificador'";
+		$resultado=$conexion->query($query);
+
+		if($resultado){
+			?>
+
+			<table class="table table-striped" border="3">
         <thead>
         <tr>
             <th>ID</th>
@@ -23,10 +35,10 @@
             
         </tr>
         </thead>
+
         <?php
-        include("Conexion.php");
-        $query= "SELECT * FROM tabladesimbolos";
-        $resultado=$conexion->query($query);
+        
+       
         while($row=$resultado->fetch_assoc()){
         ?>
         <tr>
@@ -36,14 +48,15 @@
             <td><center><?php echo $row['dimension']; ?></center></td>
             <td><center><?php echo $row['declarada']; ?></center></td>
             <td><center><?php echo $row['referencias']; ?></center></td>
-            <td><a href="eliminar.php?id=<?php echo $row['id']; ?>">Eliminar</a></td> 
-        </tr>
+            
+        </tr>   
+       
         <?php
                 }
+           }
         ?>
         </table>
         
     </body>
 
 </html>
-

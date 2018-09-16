@@ -23,7 +23,12 @@
             <input type="text" REQUIRED name="Referencias" value=""><br><br>
             <input type="submit" value="Aceptar">
         </form>
-        <input type="button" value="enviar" onclick = "location='/TablaDeSimbolos/mostrarTabla.php'"/>
+        <input type="button" value="Mostrar tabla" onclick = "location='/TablaDeSimbolos/mostrarTabla.php'"/>
+
+        <form action="buscar.php" method="POST">
+        <input type="text" name="Buscar" value=""><br><br>
+        <input type="submit" value="Buscar simbolo">
+        </form>
     </body>
 
 </html>
