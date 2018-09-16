@@ -22,8 +22,8 @@
             <font color="white"><h2>Referencias:</h2></font>
             <input type="text" REQUIRED name="Referencias" value=""><br><br>
             <input type="submit" value="Aceptar">
-
         </form>
+        <input type="button" value="enviar" onclick = "location='/TablaDeSimbolos/mostrarTabla.php'"/>
     </body>
 
 </html>
