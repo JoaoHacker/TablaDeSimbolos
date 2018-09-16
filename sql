@@ -1,0 +1,1 @@
+CREATE TABLE `tabladesimbolos` ( `id` int(20) NOT NULL, `identificador` varchar(20) NOT NULL, `tipo` varchar(20) NOT NULL, `dimension` int(20) NOT NULL, `declarada` int(20) NOT NULL, `referencias` varchar(20) NOT NULL ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
