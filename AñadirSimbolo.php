@@ -10,7 +10,7 @@
             
       
       <body background="fondo.jpg" style="background-repeat:no-repeat"> 
-        <form action="guardar.php" method="POST">
+        <form action="GuardarSimbolo.php" method="POST">
             <font color="white"><h2>Identificador:</h2></font>
             <input type="text" REQUIRED name="Identificador" value="">
             <font color="white"><h2>Tipo:</h2></font>
@@ -22,7 +22,6 @@
             <font color="white"><h2>Referencias:</h2></font>
             <input type="text" REQUIRED name="Referencias" value=""><br><br>
             <input type="submit" value="Aceptar">
-
 
         </form>
     </body>

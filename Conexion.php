@@ -1,7 +1,7 @@
 <?php
-	$mysqli = new mysqli("localhost", "root", "", "mysql");
-if ($mysqli->connect_errno) {
-    echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+	$conexion = new mysqli("localhost", "root", "","tabladesimbolos");
+if ($conexion->connect_errno) {
+    echo "Fallo al conectar a MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error;
 }else{
 	echo "BD conectada";
 }
